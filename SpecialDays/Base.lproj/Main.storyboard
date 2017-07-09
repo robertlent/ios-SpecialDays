@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaysUntil" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpecialDays" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,17 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-eG-Yto" userLabel="datePicker">
-                                <rect key="frame" x="0.0" y="142" width="320" height="284"/>
-                                <date key="date" timeIntervalSinceReferenceDate="521238326.32932001">
-                                    <!--2017-07-08 20:25:26 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="changedDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Jw-8v-JRp"/>
-                                </connections>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a date, and the number of days since/until that date will appear." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO0-9O-H06" userLabel="welcome">
-                                <rect key="frame" x="16" y="66" width="288" height="80"/>
+                                <rect key="frame" x="16" y="42" width="288" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Z5a-zJ-1oU"/>
                                 </constraints>
@@ -49,25 +40,46 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35m-MC-ua7">
+                                <rect key="frame" x="75" y="493" width="170" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="2ix-6E-rlf"/>
+                                    <constraint firstAttribute="height" constant="30" id="FTz-ZE-ESW"/>
+                                </constraints>
+                                <state key="normal" title="Share Your Special Day!"/>
+                                <connections>
+                                    <action selector="pressedShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Htp-l7-lc6"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-eG-Yto" userLabel="datePicker">
+                                <rect key="frame" x="0.0" y="129" width="320" height="284"/>
+                                <date key="date" timeIntervalSinceReferenceDate="521238326.32932001">
+                                    <!--2017-07-08 20:25:26 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changedDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Jw-8v-JRp"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.089826099574565887" green="0.69402676820755005" blue="0.19404098391532898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qO0-9O-H06" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="11a-BR-wpZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QGr-eG-Yto" secondAttribute="trailing" constant="-16" id="2Ho-Ya-WoU"/>
                             <constraint firstItem="QGr-eG-Yto" firstAttribute="centerX" secondItem="qO0-9O-H06" secondAttribute="centerX" id="2jB-zg-NgC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="udQ-Ba-a16" secondAttribute="bottom" constant="94" id="4bg-Ke-jNJ"/>
                             <constraint firstItem="qO0-9O-H06" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4jJ-PN-VQo"/>
-                            <constraint firstItem="udQ-Ba-a16" firstAttribute="centerX" secondItem="QGr-eG-Yto" secondAttribute="centerX" id="CsH-AD-1M2"/>
+                            <constraint firstItem="35m-MC-ua7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="61J-JV-QBw"/>
                             <constraint firstItem="qO0-9O-H06" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JkB-af-mnF"/>
-                            <constraint firstItem="QGr-eG-Yto" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kkp-fG-4IR"/>
-                            <constraint firstItem="QGr-eG-Yto" firstAttribute="top" secondItem="qO0-9O-H06" secondAttribute="bottom" constant="-4" id="LnI-e8-DeZ"/>
-                            <constraint firstItem="qO0-9O-H06" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="Q5T-WS-CMu"/>
+                            <constraint firstItem="QGr-eG-Yto" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-13" id="Kkp-fG-4IR"/>
+                            <constraint firstItem="QGr-eG-Yto" firstAttribute="top" secondItem="qO0-9O-H06" secondAttribute="bottom" constant="7" id="LnI-e8-DeZ"/>
+                            <constraint firstItem="qO0-9O-H06" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="Q5T-WS-CMu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="udQ-Ba-a16" secondAttribute="trailing" constant="31" id="Uix-AY-z4v"/>
+                            <constraint firstItem="udQ-Ba-a16" firstAttribute="top" secondItem="QGr-eG-Yto" secondAttribute="bottom" constant="8" id="grp-c5-4lR"/>
                             <constraint firstItem="QGr-eG-Yto" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="kbm-n8-rCM"/>
                             <constraint firstItem="QGr-eG-Yto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nyI-Fn-6g2"/>
                             <constraint firstItem="udQ-Ba-a16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdc-zs-iPM"/>
-                            <constraint firstItem="udQ-Ba-a16" firstAttribute="top" secondItem="QGr-eG-Yto" secondAttribute="bottom" constant="-5" id="rCf-Ox-LVs"/>
                             <constraint firstItem="udQ-Ba-a16" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="viz-0a-riv"/>
+                            <constraint firstItem="35m-MC-ua7" firstAttribute="top" secondItem="udQ-Ba-a16" secondAttribute="bottom" constant="19" id="y0j-R9-I5v"/>
                         </constraints>
                     </view>
                     <connections>
