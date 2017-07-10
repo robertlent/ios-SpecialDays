@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pressedShare(_ sender: UIButton) {
-        let shareAlert = UIAlertController(title: "Share", message: "Share this timeframe!", preferredStyle: .actionSheet)
+        let shareAlert = UIAlertController(title: "Share", message: "Share this Special Day!", preferredStyle: .actionSheet)
         
         let shareFacebook = UIAlertAction(title: "Share on Facebook", style: .default, handler: {(shareAlert: UIAlertAction!) in
             let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
@@ -77,18 +77,23 @@ class ViewController: UIViewController {
             switch self.timeframe {
             case 1:
                 if self.daysSince != 1 {
-                    post.setInitialText("My Special Day was \(self.daysSince) days ago! I can't believe how quickly times flies! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDay")
+                    post.setInitialText("My Special Day was \(self.daysSince) days ago! I can't believe how quickly times flies! - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 } else {
-                    post.setInitialText("My Special Day was yesterday! Did you know? - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDay")
+                    post.setInitialText("My Special Day was yesterday! Did you know? - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 }
             case 2:
                 if self.daysUntil != 1 {
-                    post.setInitialText("My Special Day is in \(self.daysUntil) days! I can't wait! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDay")
+                    post.setInitialText("My Special Day is in \(self.daysUntil) days! I can't wait! - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 } else {
-                    post.setInitialText("My Special Day is tomorrow! I didn't think I would make it! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDay")
+                    post.setInitialText("My Special Day is tomorrow! I didn't think I would make it! - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 }
             default:
-                post.setInitialText("My Special Day is today! I feel like I've waited forever! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDay")
+                post.setInitialText("My Special Day is today! I feel like I've waited forever! - Shared from Lent Coding's Special Days iOS app.")
+                post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
             }
             post.add(UIImage(named: "iPad-ProApp-83.5@2x.png"))
             
@@ -101,18 +106,23 @@ class ViewController: UIViewController {
             switch self.timeframe {
             case 1:
                 if self.daysSince != 1 {
-                    post.setInitialText("My Special Day was \(self.daysSince) days ago! I can't believe how time flies! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDays")
+                    post.setInitialText("My Special Day was \(self.daysSince) days ago! Time flies! - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 } else {
-                    post.setInitialText("My Special Day was yesterday! Did you know? - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDays")
+                    post.setInitialText("My Special Day was yesterday! Did you know? - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 }
             case 2:
                 if self.daysUntil != 1 {
-                    post.setInitialText("My Special Day is in \(self.daysUntil) days! I can't wait! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDays")
+                    post.setInitialText("My Special Day is in \(self.daysUntil) days! I can't wait! - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 } else {
-                    post.setInitialText("My Special Day is tomorrow! I didn't think I would make it! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDays")
+                    post.setInitialText("My Special Day is tomorrow! I didn't think I would make it! - Shared from Lent Coding's Special Days iOS app.")
+                    post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
                 }
             default:
-                post.setInitialText("My Special Day is today! I feel like I've waited forever! - Shared from Lent Coding's 'Special Days' iOS app. https://github.com/robertmlent/ios-SpecialDays")
+                post.setInitialText("My Special Day is today! I feel like I've waited forever! - Shared from Lent Coding's Special Days iOS app.")
+                post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
             }
             post.add(UIImage(named: "iPad-ProApp-83.5@2x.png"))
             
