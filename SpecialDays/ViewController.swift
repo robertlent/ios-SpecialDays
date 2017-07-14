@@ -124,7 +124,6 @@ class ViewController: UIViewController {
                 post.setInitialText("My Special Day is today! I feel like I've waited forever! - Shared from Lent Coding's Special Days iOS app.")
                 post.add(URL(string: "https://github.com/robertmlent/ios-SpecialDays"))
             }
-            post.add(UIImage(named: "iPad-ProApp-83.5@2x.png"))
             
             self.present(post, animated: true, completion: nil)
         })
