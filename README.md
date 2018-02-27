@@ -14,7 +14,7 @@ The user can share the number of days since/until their Special Day on Twitter o
 ![ScreenShot](Screenshots/AppInterfaceShare.png)
 
 ### Works on
- The app is written in Swift 3, so it should run on any device running iOS 8 or later.
+The app is written in Swift 3, and should run on most devices running iOS 8 or later, with some potential exceptions, as some features may not be available in versions before iOS 10.
 
 ### Artwork
   Reem Lent designed the app icon
